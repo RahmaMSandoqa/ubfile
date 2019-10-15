@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)file:///home/raham/Downloads/E2%20(1).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Executing a Function on Click Event in jQuery</title>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+ 
+    <style type="text/css">
+      p {
+        padding: 20px;
+        font: 20px sans-serif;
+        background: khaki;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <p>Click on me and I'll disappear.</p>
+    <p>Click on me and I'll disappear.</p>
+    <p>Click on me and I'll disappear.</p>
+  
+<script>
+  $(function (){
+ $('p').click(function(){
+$(this).slideUp('slow').slideDown(3000);
+
+ });
+})
+
+</script>
+
+</body></html>

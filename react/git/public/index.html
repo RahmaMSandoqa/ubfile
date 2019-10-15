@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    
+  </head>
+  <body>
+      <h1>Gethub api</h1>
+      <button id = 'btnRepos'>Repos</button>
+      <div id ='divResult'></div>
+      <script>
+
+        const btnRepos = document.getElementById("btnRepose")
+        consr divResult = document.getElementById("divResult")
+
+        btnRepos.addEventListener("click, getRepos")
+        async function getRepos() {
+          const url = "https://api.github.com/search/repositories?q=stars:>100000"
+          const response = await fetch(url)
+          const result = await response.jeson()
+
+
+          result.items.forEach(i=>{
+
+         
+         divResult.appendChild(document.creattextNode(i.full_name))
+
+
+          })
+          
+
+        }
+
+
+      </script>
+
+  </body>
+</html>
+ 
